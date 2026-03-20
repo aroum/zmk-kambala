@@ -1,0 +1,11 @@
+manifest:
+  remotes:    
+    - name: aroum
+      url-base: https://github.com/aroum
+  projects:
+    - name: zmk
+      remote: aroum
+      revision: main
+      import: app/west.yml
+  self:
+    path: config
