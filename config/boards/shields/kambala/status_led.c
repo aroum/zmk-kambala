@@ -145,7 +145,12 @@ void check_ble_conn_handler(struct k_work *work)
         }
         else
         {
-            led_fade_blink(&pwm_leds[0], LED_BLINK_CONN_DELAY, 1);
+            uint8_t active_profile = zmk_ble_active_profile_index();
+            if (active_profile < 3)
+            {
+                led_set_brightness(pwm_leds[active_profile].dev, pwm_leds[active_profile].id, LED_STATUS_ON);
+            }
+            led_fade_blink(&pwm_leds[3], LED_BLINK_CONN_DELAY, 1);
             led_all_OFF();
             k_work_schedule(&check_ble_conn_work, K_SECONDS(4)); // Restart work for next status check
             return;
@@ -158,7 +163,7 @@ void check_ble_conn_handler(struct k_work *work)
         }
         else
         {
-            led_fade_blink(&pwm_leds[0], LED_BLINK_CONN_DELAY, 1);
+            led_fade_blink(&pwm_leds[3], LED_BLINK_CONN_DELAY, 1);
             led_all_OFF();
             k_work_schedule(&check_ble_conn_work, K_SECONDS(4)); // Restart work for next status check
             return;
