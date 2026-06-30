@@ -53,7 +53,7 @@
             psels = <NRF_PSEL(PWM_OUT0, 0, 10)>,  // LED 0 P0.10 (pin 16)
                     <NRF_PSEL(PWM_OUT1, 0, 9)>,   // LED 1 P0.09 (pin 10)
                     <NRF_PSEL(PWM_OUT2, 1, 4)>,   // LED 2 P1.04 (pin 8)
-                    <NRF_PSEL(PWM_OUT2, 1, 6)>;   // LED 3 P1.06 (pin 9)
+                    <NRF_PSEL(PWM_OUT3, 1, 6)>;   // LED 3 P1.06 (pin 9)
         };
     };
     pwm0_sleep: pwm0_sleep {
@@ -61,7 +61,7 @@
             psels = <NRF_PSEL(PWM_OUT0, 0, 10)>,  // LED 0 P0.10 (pin 16)
                     <NRF_PSEL(PWM_OUT1, 0, 9)>,   // LED 1 P0.09 (pin 10)
                     <NRF_PSEL(PWM_OUT2, 1, 4)>,   // LED 2 P1.04 (pin 8)
-                    <NRF_PSEL(PWM_OUT2, 1, 6)>;   // LED 3 P1.06 (pin 9)
+                    <NRF_PSEL(PWM_OUT3, 1, 6)>;   // LED 3 P1.06 (pin 9)
 
             low-power-enable;
         };
