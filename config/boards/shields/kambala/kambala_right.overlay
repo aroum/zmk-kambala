@@ -93,7 +93,7 @@
 };
 
 // Soft off button on d1 (p0.06)
-&gpio0 {
+/ {
     soft_off_gpio_key: soft_off_key {
         compatible = "gpio-keys";
         gpios = <&pro_micro 6 GPIO_ACTIVE_LOW>;
@@ -101,9 +101,7 @@
         debounce-delay-ms = <10>;
         wakeup-source;
     };
-};
 
-/ {
     wakeup_scan: wakeup_scan {
         compatible = "zmk,gpio-key-wakeup-trigger";
         trigger = <&soft_off_gpio_key>;
