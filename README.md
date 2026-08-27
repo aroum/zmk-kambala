@@ -10,7 +10,7 @@ The keyboard features 4 status LEDs (LED 1 to LED 4) to display battery charge, 
 
 ### 🔋 Battery Status
 
-*(Legend: 🟢 = Solid ON, 🟡 = Blinking, 🔵 = Blinks onceб ⚫ = OFF)*
+*(Legend: 🟢 = Solid ON, 🟡 = Blinking, 🔵 = Blinks once ⚫ = OFF)*
 
 When checking battery status (e.g. at startup or when triggered), the first 3 LEDs indicate the battery level:
 
